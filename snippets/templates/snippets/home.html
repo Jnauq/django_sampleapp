@@ -1,8 +1,0 @@
-{% extends 'snippets/base.html' %}
-
-{% block content %}
-    {% for name in names %}
-        <h1>Hello! {{ name }}</h1>
-        <a href="{% url 'snippets-detail' id=1 %}">Link to profile</a>
-    {% endfor %}
-{% endblock content %}

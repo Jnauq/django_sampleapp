@@ -1,0 +1,9 @@
+{% extends 'snippets/base.html' %}
+
+{% block content %}
+    <div>
+    {% for snippet in snippet_list %}
+        <a href="{% url 'snippets-detail' snippet.id %}">{{ snippet.title }}</a><br/>
+    {% endfor %}
+    </div>
+{% endblock content %}
