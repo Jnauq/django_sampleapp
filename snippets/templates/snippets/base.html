@@ -7,7 +7,11 @@
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'snippets/styles.css' %}">
-    <title>Snippets</title>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Document</title>
+    {% endif %}
 </head>
 <body>
     {% block content %}

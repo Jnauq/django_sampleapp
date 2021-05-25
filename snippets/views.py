@@ -5,7 +5,7 @@ from django.views.generic import ListView, DetailView
 
 def snippet_list(request):
     snippets_list = Snippet.objects.all()
-    return render(request, 'snippets/snippet-list.html', {'snippet_list': snippets_list})
+    return render(request, 'snippets/snippet-list.html', {'snippet_list': snippets_list, 'title': 'MY TITLE'})
 
 
 def snippet_detail(request, id):
